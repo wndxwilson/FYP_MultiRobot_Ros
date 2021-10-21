@@ -1,0 +1,13 @@
+<launch>
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="robot_namespace" default="/"/>
+
+  <include file="$(find multi_robot_simulator)/launch/spawn_husky.launch">
+    <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+    <arg name="realsense_enabled" value="$(arg realsense_enabled)"/>
+    <arg name="robot_namespace" value="$(arg robot_namespace)"/>
+  </include>
+
+</launch>
